@@ -1,0 +1,152 @@
+{
+  "%23tanstack-start-plugin-adapters": {
+    "file": "assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js",
+    "name": "__23tanstack-start-plugin-adapters",
+    "src": "%23tanstack-start-plugin-adapters",
+    "isDynamicEntry": true
+  },
+  "C:/Users/welin/OneDrive/Área de Trabalho/Swalf RPG Life/src/styles.css": {
+    "file": "assets/styles-Bb-nQndh.css",
+    "src": "C:/Users/welin/OneDrive/Área de Trabalho/Swalf RPG Life/src/styles.css"
+  },
+  "_AttributeBar-CxQKZCEa.js": {
+    "file": "assets/AttributeBar-CxQKZCEa.js",
+    "name": "AttributeBar",
+    "imports": [
+      "_router-CCakqlgZ.js",
+      "_worker-entry-Dd1yEBJp.js"
+    ]
+  },
+  "_router-CCakqlgZ.js": {
+    "file": "assets/router-CCakqlgZ.js",
+    "name": "router",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-Dd1yEBJp.js"
+    ],
+    "dynamicImports": [
+      "src/routes/shop.tsx?tsr-split=component",
+      "src/routes/profile.tsx?tsr-split=component",
+      "src/routes/missions.tsx?tsr-split=component",
+      "src/routes/calendar.tsx?tsr-split=component",
+      "src/routes/boss.tsx?tsr-split=component",
+      "src/routes/achievements.tsx?tsr-split=component",
+      "src/routes/index.tsx?tsr-split=component"
+    ],
+    "assets": [
+      "assets/styles-Bb-nQndh.css"
+    ]
+  },
+  "_trash-2-CLq0uyG7.js": {
+    "file": "assets/trash-2-CLq0uyG7.js",
+    "name": "trash-2",
+    "imports": [
+      "_router-CCakqlgZ.js"
+    ]
+  },
+  "_worker-entry-Dd1yEBJp.js": {
+    "file": "assets/worker-entry-Dd1yEBJp.js",
+    "name": "worker-entry",
+    "dynamicImports": [
+      "tanstack-start-manifest:v",
+      "_router-CCakqlgZ.js",
+      "node_modules/@tanstack/react-start/dist/plugin/default-entry/start.ts",
+      "%23tanstack-start-plugin-adapters"
+    ]
+  },
+  "node_modules/@tanstack/react-start/dist/plugin/default-entry/start.ts": {
+    "file": "assets/start-HYkvq4Ni.js",
+    "name": "start",
+    "src": "node_modules/@tanstack/react-start/dist/plugin/default-entry/start.ts",
+    "isDynamicEntry": true
+  },
+  "src/routes/achievements.tsx?tsr-split=component": {
+    "file": "assets/achievements-DNryZJN9.js",
+    "name": "achievements",
+    "src": "src/routes/achievements.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-Dd1yEBJp.js",
+      "_router-CCakqlgZ.js"
+    ]
+  },
+  "src/routes/boss.tsx?tsr-split=component": {
+    "file": "assets/boss-0Iifq-9Y.js",
+    "name": "boss",
+    "src": "src/routes/boss.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-Dd1yEBJp.js",
+      "_router-CCakqlgZ.js"
+    ]
+  },
+  "src/routes/calendar.tsx?tsr-split=component": {
+    "file": "assets/calendar-E4oqTanQ.js",
+    "name": "calendar",
+    "src": "src/routes/calendar.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-Dd1yEBJp.js",
+      "_router-CCakqlgZ.js"
+    ]
+  },
+  "src/routes/index.tsx?tsr-split=component": {
+    "file": "assets/index-BE-IPo8y.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-Dd1yEBJp.js",
+      "_router-CCakqlgZ.js",
+      "_AttributeBar-CxQKZCEa.js"
+    ]
+  },
+  "src/routes/missions.tsx?tsr-split=component": {
+    "file": "assets/missions-Bnjo41av.js",
+    "name": "missions",
+    "src": "src/routes/missions.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-Dd1yEBJp.js",
+      "_router-CCakqlgZ.js",
+      "_trash-2-CLq0uyG7.js"
+    ]
+  },
+  "src/routes/profile.tsx?tsr-split=component": {
+    "file": "assets/profile-DaeT-yzB.js",
+    "name": "profile",
+    "src": "src/routes/profile.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-Dd1yEBJp.js",
+      "_router-CCakqlgZ.js",
+      "_AttributeBar-CxQKZCEa.js"
+    ]
+  },
+  "src/routes/shop.tsx?tsr-split=component": {
+    "file": "assets/shop-D94iGiv9.js",
+    "name": "shop",
+    "src": "src/routes/shop.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-Dd1yEBJp.js",
+      "_router-CCakqlgZ.js",
+      "_trash-2-CLq0uyG7.js"
+    ]
+  },
+  "tanstack-start-manifest:v": {
+    "file": "assets/_tanstack-start-manifest_v-BQ0fmMaf.js",
+    "name": "_tanstack-start-manifest_v",
+    "src": "tanstack-start-manifest:v",
+    "isDynamicEntry": true
+  },
+  "virtual:cloudflare/worker-entry": {
+    "file": "index.js",
+    "name": "index",
+    "src": "virtual:cloudflare/worker-entry",
+    "isEntry": true,
+    "imports": [
+      "_worker-entry-Dd1yEBJp.js"
+    ]
+  }
+}
