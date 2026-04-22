@@ -1,0 +1,180 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-strength: var(--strength);
+  --color-intelligence: var(--intelligence);
+  --color-vitality: var(--vitality);
+  --color-xp: var(--xp);
+  --color-gold: var(--gold);
+  --animate-xp-pop: xp-pop 0.6s ease-out;
+  --animate-glow: glow 2s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.4s ease-out;
+  --animate-shimmer: shimmer 2.5s linear infinite;
+  --animate-float-slow: float-slow 5s ease-in-out infinite;
+  --animate-rune-spin: rune-spin 30s linear infinite;
+}
+
+:root {
+  --radius: 0.75rem;
+  /* Dark RPG theme as default */
+  --background: oklch(0.16 0.02 270);
+  --foreground: oklch(0.96 0.01 270);
+  --card: oklch(0.21 0.025 270);
+  --card-foreground: oklch(0.96 0.01 270);
+  --popover: oklch(0.21 0.025 270);
+  --popover-foreground: oklch(0.96 0.01 270);
+  --primary: oklch(0.72 0.18 290);
+  --primary-foreground: oklch(0.16 0.02 270);
+  --secondary: oklch(0.28 0.03 270);
+  --secondary-foreground: oklch(0.96 0.01 270);
+  --muted: oklch(0.25 0.02 270);
+  --muted-foreground: oklch(0.7 0.03 270);
+  --accent: oklch(0.32 0.05 290);
+  --accent-foreground: oklch(0.96 0.01 270);
+  --destructive: oklch(0.62 0.24 25);
+  --destructive-foreground: oklch(0.98 0.01 270);
+  --border: oklch(0.3 0.03 270);
+  --input: oklch(0.28 0.03 270);
+  --ring: oklch(0.72 0.18 290);
+
+  --strength: oklch(0.65 0.22 25);
+  --intelligence: oklch(0.7 0.18 240);
+  --vitality: oklch(0.72 0.2 145);
+  --xp: oklch(0.78 0.18 85);
+  --gold: oklch(0.82 0.16 85);
+
+  --gradient-primary: linear-gradient(135deg, oklch(0.72 0.18 290), oklch(0.62 0.22 320));
+  --gradient-xp: linear-gradient(90deg, oklch(0.78 0.18 85), oklch(0.72 0.2 60));
+  --gradient-boss: linear-gradient(90deg, oklch(0.6 0.25 25), oklch(0.55 0.28 350));
+  --gradient-card: linear-gradient(160deg, oklch(0.24 0.04 275), oklch(0.18 0.03 285));
+  --gradient-gold: linear-gradient(135deg, oklch(0.88 0.16 90), oklch(0.7 0.18 60));
+
+  --shadow-glow: 0 0 30px oklch(0.72 0.18 290 / 0.4);
+  --shadow-glow-strong: 0 0 50px oklch(0.72 0.18 290 / 0.6), 0 0 100px oklch(0.62 0.22 320 / 0.3);
+  --shadow-card: 0 10px 30px oklch(0.08 0.02 270 / 0.6), inset 0 1px 0 oklch(1 0 0 / 0.05);
+  --shadow-gold: 0 0 30px oklch(0.82 0.16 85 / 0.4);
+}
+
+@keyframes xp-pop {
+  0% { transform: translateY(0) scale(0.8); opacity: 0; }
+  30% { transform: translateY(-20px) scale(1.2); opacity: 1; }
+  100% { transform: translateY(-60px) scale(1); opacity: 0; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px oklch(0.72 0.18 290 / 0.3); }
+  50% { box-shadow: 0 0 40px oklch(0.72 0.18 290 / 0.6); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes rune-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html, body { background-color: var(--color-background); color: var(--color-foreground); }
+  body {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background-image:
+      radial-gradient(ellipse at 20% 0%, oklch(0.3 0.12 290 / 0.45), transparent 55%),
+      radial-gradient(ellipse at 85% 100%, oklch(0.26 0.12 320 / 0.4), transparent 55%),
+      linear-gradient(180deg, oklch(0.13 0.02 270), oklch(0.16 0.025 285));
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    z-index: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@utility card-rpg {
+  position: relative;
+  background: var(--gradient-card);
+  border: 1px solid oklch(0.4 0.05 290 / 0.35);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+@utility card-rpg-glow {
+  background: var(--gradient-card);
+  border: 1px solid oklch(0.72 0.18 290 / 0.5);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+}
+
+@utility text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility shimmer-bar {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.3), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s linear infinite;
+  }
+}
